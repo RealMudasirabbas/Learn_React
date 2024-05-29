@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import Props from '../src/components/props/Props';
 import './App.css';
 
 function App() {
+  const maria = {
+    name: "Maria Skłodowska-Curie",
+    profession: "physicist and chemist",
+    awards: "Nobel Prize in Physics, Nobel Prize in Chemistry, DavyMedal, Matteucci Medal",
+    discovery: "polonium (chemical element)"
+  }
+  const katsuko = {
+      name: "Katsuko Saruhashi",
+      profession: "geochemist",
+      awards: "(Miyake Prize for geochemistry, Tanaka Prize)",
+      discovery: "a method for measuring carbon dioxide in seawater",
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Props maria={maria} katsuko={katsuko} />
   );
 }
 
