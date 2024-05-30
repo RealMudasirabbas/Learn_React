@@ -1,4 +1,4 @@
-import  ImageUrl  from "../../utils/ImageUrl";
+import  ImageSizeUrl  from "../../utils/ImageSizeUrl";
 
 function Avatar({ person, size }) {
 
@@ -13,7 +13,7 @@ function Avatar({ person, size }) {
     return (
         <img
             className="avatar"
-            src={ImageUrl(person, imageThumbnailSize)}
+            src={ImageSizeUrl(person, imageThumbnailSize)}
             alt={person.name}
             width={size}
             height={size}
