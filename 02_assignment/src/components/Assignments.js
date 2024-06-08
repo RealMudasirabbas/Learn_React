@@ -1,5 +1,5 @@
 import React from "react";
-
+// JSX Practice
 function Assignments() {
     return (
         <>
