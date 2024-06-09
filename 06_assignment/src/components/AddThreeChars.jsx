@@ -1,32 +1,28 @@
 import React, { useState } from "react";
 
-const AddPy = () => {
-    const [py, setPy] = useState("");
+const AddThreeChars = () => {
+    const [str, setStr] = useState("")
     const [result, setResult] = useState("");
 
     function handleClick() {
-        if (py[0] == "P" && py[1] == "y") {
-            setResult(py);
-        } else if (py[0] == "p" && py[1] == "y") {
-            setResult(py);
-        } else {
-            setResult("Py" + py);
-        }
+        const slicedStr = str.slice([-3]);
+        const newFormattedStr = slicedStr + str + slicedStr;
+        setResult(newFormattedStr)
     }
 
     return (
         <>
             <h3 className="font-bold text-center items-center flex-1 justify-center">
-                {" "}
-                Q no 3: Check if word starts with Py
+                
+                Q no 8: Add Three Characters In A String
             </h3>
             <label className="text-center items-center flex-1 justify-center m-2 p-2">
-                Enter your word:{" "}
+                Enter your word:
             </label>
             <input
                 type="text"
-                value={py}
-                onChange={(e) => setPy(e.target.value)}
+                value={str}
+                onChange={(e) => setStr(e.target.value)}
                 className="m-3 p[0.7rem] text-black rounded-md p-2"
             />
             <br />
@@ -45,4 +41,4 @@ const AddPy = () => {
     );
 };
 
-export default AddPy;
+export default AddThreeChars;

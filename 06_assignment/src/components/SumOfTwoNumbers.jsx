@@ -16,7 +16,8 @@ function SumOfTwoNumbers() {
     return (
         
             <>
-                <h3 className="font-bold text-center items-center flex-1 justify-center">Sum Of Two Numbers</h3>
+                <h3 className="font-bold text-center items-center flex-1 justify-center">
+                    Q no 1: Sum Of Two Numbers</h3>
 
                 <div className="m-4 p-4">
                     <h5 className="font-bold text-center items-center flex-1 justify-center">
