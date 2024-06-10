@@ -8,7 +8,8 @@ import ModifyAString from "./components/ModifyAString";
 import AddChar from "./components/AddChar";
 import CheckMultiples from "./components/CheckMultiples";
 import AddThreeChars from "./components/AddThreeChars";
-
+import Form from "./components/Form";
+import FormWithImmer from "./components/FormWithImmer";
 
 function App() {
     return (
@@ -38,6 +39,12 @@ function App() {
             </Card>
             <Card>
                 <AddThreeChars />
+            </Card>
+            <Card>
+                <Form />
+            </Card>
+            <Card>
+                <FormWithImmer />
             </Card>
         </div>
     );
