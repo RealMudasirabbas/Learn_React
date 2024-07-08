@@ -14,20 +14,12 @@ function AddStudent({ updateCount,updateCountFunc }) {
     const submitData = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("https://localhost:7026/api/add-student", {
+            await axios.post("http://localhost:8080/api/add-student", {
                 name: student.studentName,
                 fatherName: student.fatherName,
                 grade: student.grade,
                 contactNo: student.contactNo,
             });
-            
-            
-            // setStudent({
-            //     studentName: "",
-            //     fatherName: "",
-            //     grade: "",
-            //     contactNo: 0,
-            // });
 
             updateCountFunc(updateCount + 1)
 

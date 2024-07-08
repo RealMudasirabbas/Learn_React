@@ -15,7 +15,7 @@ function AllStudents() {
         async function getAllStudents() {
             try {
                 await axios
-                    .get("https://localhost:7026/api/get-all-students")
+                    .get("http://localhost:8080/api/get-all-students")
                     .then((response) => {
                         console.log(response);
                         setStudents(response.data);
@@ -70,7 +70,7 @@ function AllStudents() {
                     ))}
                 </tbody>
             </table>
-            {id && <UpdateStudent studentId={id} />}
+            {id && <UpdateStudent studentId={id} countFunc={updateCount} updateCountFunc={setUpdateCount} />}
 
             {delId && (
                 <DeleteStudent

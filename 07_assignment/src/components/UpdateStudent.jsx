@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import axios from "axios";
 
-function UpdateStudent({studentId}) {
+function UpdateStudent({studentId,countFunc,updateCountFunc}) {
     const stdId = studentId
     const [student, setStudent] = useState({
         name: "",
@@ -18,7 +18,7 @@ function UpdateStudent({studentId}) {
         async function getStudent() {
             try {
                 await axios
-                    .get(`https://localhost:7026/api/get-student?id=${stdId}`)
+                    .get(`http://localhost:8080/api/get-student?id=${stdId}`)
                     .then((response) => {
                         console.log(response);
                         // const newResponse = response.data
@@ -50,10 +50,10 @@ function UpdateStudent({studentId}) {
         e.preventDefault();
         try {
             await axios
-                .put(`https://localhost:7026/api/update-student/${stdId}`, student
+                .put(`http://localhost:8080/api/update-student/${stdId}`, student
                 )
                 .then((res) => {
-                
+                    updateCountFunc(countFunc + 1)
                     console.log(res);
                 })
 
